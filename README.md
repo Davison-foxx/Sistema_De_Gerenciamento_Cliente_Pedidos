@@ -21,3 +21,24 @@ O **objetivo real** deste projeto é ser o **motor operacional (backend)** para 
 | :--- | :--- | :--- |
 | **Abertura da Transação** | Iniciação da Venda |(nova venda) para o cliente que está sendo atendido. |
 | **Processamento do Pedido** | Inserção e Modificação de Itens | O operador adiciona, remove e ajusta a **quantidade** de itens conforme o cliente dita, montando o pedido. |
+
+
+## 📐 Arquitetura de Dados (Diagrama ER)
+ 
+
+O projeto utiliza um design focado em entidades bem relacionadas:
+Um **Cliente** pode realizar vários **pedidos** (representado pelo **0..***) . 
+Mas um **Pedido** pertence obrigatoriamente a apenas um **cliente** (representado pelo **1**).
+
+**Pedido** x **ItemPedido**
+* Um **Pedido** é composto por vários itens de **pedido** (representado pelo **1.*** - indicando que o **pedido** não pode estar vazio). 
+* Mas um **ItemPedido** (aquela linha específica da nota) pertence a apenas um **pedido**(representado pelo **1**).
+
+ **Produto** x **ItemPedido** 
+* Um **Produto** pode aparecer em vários itens de **pedidos** diferentes ao longo do tempo (representado pelo **0..***). 
+Mas um **ItemPedido** se refere a apenas um **produto** específico (representado pelo **1**).
+
+#### Abaixo, o diagrama de classes (UML) que representa a modelagem das entidades do sistema.
+
+![Diagrama UML](Docs/modelo-logico.jpeg)
+![Diagrama UML](Docs/diagrama-uml.jpeg)
