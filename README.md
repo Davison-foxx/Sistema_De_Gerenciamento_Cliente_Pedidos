@@ -42,3 +42,122 @@ Mas um **ItemPedido** se refere a apenas um **produto** específico (representad
 
 ![Diagrama UML](Docs/modelo-logico.jpeg)
 ![Diagrama UML](Docs/diagrama-uml.jpeg)
+
+
+## 🔹 Endpoints Principais
+
+### 📦 Cliente
+| Método | Rota | Descrição |
+| :--- | :--- | :--- |
+| **GET** | `/cliente` | Lista todos os clientes |
+| **POST** | `/cliente` | Cadastra um **novo** cliente |
+| **GET** | `/cliente/{id}` | Busca cliente por ID |
+| **PUT** | `/cliente/{id}` | **Atualiza** cliente por ID |
+| **DELETE** | `/cliente/{id}` | **Remove** cliente por ID |
+
+
+## 🧪 Exemplo de Requisição: Criação de Cliente
+Para cadastrar um novo cliente (POST /clientes), o corpo da requisição deve ser:
+
+### Requisição
+
+```json
+
+{
+    "nome": "lucas",
+    "email": "lucas@gmail.com",
+    "numero": "2134324546"
+}
+
+````
+---
+
+### 📦 Pedido
+| Método | Rota | Descrição |
+| :--- | :--- | :--- |
+| **GET** | `/pedido` | Lista todos os pedidos |
+| **POST** | `/pedido` | Cadastra um **novo** pedido |
+| **GET** | `/pedido/{id}` | Busca pedido por ID |
+| **PUT** | `/pedido/{id}` | **Atualiza** pedido por ID |
+| **DELETE** | `/pedido/{id}` | **Remove** pedido por ID |
+
+## 🧪 Exemplo de Requisição: Criação de Pedido
+Para cadastrar um novo pedido (POST /pedido), o corpo da requisição deve ser:
+
+### Requisição
+
+```json
+
+{
+    "cliente": {
+        "id": 6
+    },
+    "itens": [
+        {
+            "produto": {
+                "id": 8
+            },
+            "quantidade": 4
+        },
+        {
+            "produto": {
+                "id": 6
+            },
+            "quantidade": 3
+        }
+    ]
+}
+````
+
+---
+
+### 📦 ItemPedido
+| Método | Rota | Descrição |
+| :--- | :--- | :--- |
+| **GET** | `/itempedido` | Lista todos os itempedidos |
+| **POST** | `/itempedido` | Cadastra um **novo** itempedido |
+| **GET** | `/itempedido/{id}` | Busca itempedido por ID |
+| **PUT** | `/itempedido/{id}` | **Atualiza** itempedido por ID |
+| **DELETE** | `/itempedido/{id}` | **Remove** itempedido por ID |
+
+## 🧪 Exemplo de Requisição: Criação de itempedido
+Para cadastrar um novo itempedido (POST /itempedido), o corpo da requisição deve ser:
+
+### Requisição
+
+```json
+{
+   
+	  "quantidade": "12",
+	 "pedido_id": "1",
+    "produto_id": "1"
+
+}
+````
+
+---
+
+### 📦 Produtos
+| Método | Rota | Descrição |
+| :--- | :--- | :--- |
+| **GET** | `/produto` | Lista todos os produtos |
+| **POST** | `/produto` | Cadastra um **novo** produto |
+| **GET** | `/produto/{id}` | Busca produto por ID |
+| **PUT** | `/produto/{id}` | **Atualiza** produto por ID |
+| **DELETE** | `/produto/{id}` | **Remove** produto por ID |
+
+## 🧪 Exemplo de Requisição: Criação de Produto
+Para cadastrar um novo produto (POST /produtos), o corpo da requisição deve ser:
+
+### Requisição
+
+```json
+{
+	"nome": "dorflex",
+	"preco": "15.19"
+	
+}
+````
+
+---
+
