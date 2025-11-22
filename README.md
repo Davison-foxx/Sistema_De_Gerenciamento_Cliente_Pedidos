@@ -6,12 +6,9 @@ API desenvolvida em **Java** com o framework **Spring Boot** para atuar como o *
 * **Itens do Pedido** (Composição dos itens do Pedidos )
 * **Produto** (Produtos à venda)
 
-## 🚀 Tecnologias Utilizadas
-* Java 25
-* Eclipse
-* Spring Boot
-* Spring Web
-* Spring Data JPA
-* Hibernate
-* H2 / MySQL
-* Maven
+## 🛠️ Como Executar
+
+1.  **Clone o repositório:** `git clone https://github.com/Davison-foxx/Sistema_De_Gerenciamento_Cliente_Pedidos
+2.  **Navegue até o diretório:** `cd nome-do-projeto`
+3.  **Execute via Maven:** `./mvnw spring-boot:run`
+4.  A API estará disponível em: **`http://localhost:8080`**
