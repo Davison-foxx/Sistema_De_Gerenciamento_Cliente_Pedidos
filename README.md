@@ -161,3 +161,11 @@ Para cadastrar um novo produto (POST /produtos), o corpo da requisição deve se
 
 ---
 
+## 🧱 Estrutura de Pastas
+
+    src/main/java/
+     └── com.projetoSpringBoot
+          ├── controller (Recebe requisições HTTP e retorna respostas)
+          ├── service (Implementa a lógica de negócio)
+          ├── repository (Interage com o banco de dados)
+          └── entities (Representa as entidades do banco de dados)
