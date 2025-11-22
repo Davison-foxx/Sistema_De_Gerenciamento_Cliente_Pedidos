@@ -6,3 +6,12 @@ API desenvolvida em **Java** com o framework **Spring Boot** para atuar como o *
 * **Itens do Pedido** (Composição dos itens do Pedidos )
 * **Produto** (Produtos à venda)
 
+## 🚀 Tecnologias Utilizadas
+* Java 25
+* Eclipse
+* Spring Boot
+* Spring Web
+* Spring Data JPA
+* Hibernate
+* H2 / MySQL
+* Maven
